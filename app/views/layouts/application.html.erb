@@ -96,16 +96,30 @@
       searchResultsDiv.html(`<p>${query}</p>`);
     }
 
-    // Function to log search on the backend
-    function logSearch(query) {
-      $.post('/search', { query: query })
-        .done(function(data) {
-          // Handle success, if needed
-        })
-        .fail(function(error) {
-          console.error(`Error logging search query: ${error.statusText}`);
-        });
+  
+// Function to log search on the backend
+function logSearch(query) {
+  // Get the CSRF token from the meta tag
+  const csrfToken = $('meta[name=csrf-token]').attr('content');
+
+  // Include the CSRF token in the headers of the AJAX request
+  $.ajax({
+    url: '/search',
+    type: 'POST',
+    data: { query: query },
+    headers: {
+      'X-CSRF-Token': csrfToken
+    },
+    success: function(data) {
+      // Handle success, if needed
+    },
+    error: function(error) {
+      console.error(`Error logging search query: ${error.statusText}`);
     }
+  });
+}
+
+
 
     // Function to analyze search queries
     function analyzeSearchQuery(searchQuery) {

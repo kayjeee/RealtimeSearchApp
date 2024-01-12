@@ -9,6 +9,7 @@ class SearchController < ApplicationController
 
   def analytics
     @searches = Search.group(:query).count
+    p @searches # Add this line for debugging
   end
 
   private
