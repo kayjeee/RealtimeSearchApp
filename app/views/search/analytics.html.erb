@@ -1,0 +1,7 @@
+<!-- app/views/search/analytics.html.erb -->
+
+<h1>Search Analytics</h1>
+
+<% @searches.each do |query, count| %>
+  <p><%= query %>: <%= count %> searches</p>
+<% end %>

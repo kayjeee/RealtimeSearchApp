@@ -15,6 +15,6 @@ class SearchController < ApplicationController
 
   def log_search(query, ip)
     # Log the search query along with IP (e.g., save to a database)
-    Search.create(query:, ip:)
+    Search.create(query: query, ip: ip)
   end
 end
