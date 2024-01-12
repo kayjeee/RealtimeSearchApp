@@ -166,6 +166,7 @@
             console.log(`User searched for: "${searchQuery}" (${summary})`);
              // Store the incomplete search query for later processing
             storeIncompleteSearch(searchQuery);
+            logSearch(summary);
           }
         });
 
