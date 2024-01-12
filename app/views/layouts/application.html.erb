@@ -1,179 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RealtimeSearchApp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-
-    <!-- Include jQuery for simplicity -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-    <style>
-      body {
-        text-align: center;
-      }
-
-      #searchBar {
-        margin-top: 20px;
-      }
-
-      #searchResults {
-        margin-top: 10px;
-      }
-    </style>
-  </head>
- <body>
-    <div id="searchBar">
-      <input type="text" id="searchBox" placeholder="Search..." oninput="handleSearch()">
-    </div>
-
-    <div id="searchResults"></div>
-
-    <script>
-      let typingTimer;
-      let previousSearchQuery = '';
-      const searchBox = $('#searchBox');
-      const searchResultsDiv = $('#searchResults');
-
-      // Function to check if a string is a complete sentence
-      function isCompleteSentence(sentence) {
-        return sentence.trim().endsWith('.') || sentence.trim().endsWith('!') || sentence.trim().endsWith('?');
-      }
-
-      // Function to check for completeness using language processing (replace with actual implementation)
-      function checkCompletenessUsingLanguageProcessing(sentence) {
-        const minLengthForCompleteness = 10;
-        const keywordsForCompleteness = ["how", "why"];
-
-        const trimmedSentence = sentence.trim().toLowerCase();
-
-        // Additional heuristic: If the sentence ends with a punctuation mark, consider it complete
-        const endsWithPunctuation = /[.!?]$/.test(trimmedSentence);
-
-        // Combine length, keyword, and punctuation heuristics for completeness
-        const isComplete =
-          trimmedSentence.length >= minLengthForCompleteness &&
-          (keywordsForCompleteness.some(keyword => trimmedSentence.includes(keyword)) || endsWithPunctuation);
-
-        return isComplete;
-      }
-
-      function handleSearch() {
-        clearTimeout(typingTimer);
-        typingTimer = setTimeout(sendSearchQuery, 15);
-      }
-
-function sendSearchQuery() {
-  const searchQuery = searchBox.val().trim();
-
-  if (searchQuery !== "") {
-    // Analyze the search query for completeness
-    analyzeSearchQuery(searchQuery);
-
-    // Only send the searchQuery to the backend if it's a valid question
-    if (isCompleteSentence(searchQuery)) {
-      logSearch(searchQuery);
+<head>
+  <!-- Meta tags for character set and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Page title and additional meta tags (CSRF, CSP, styles, and JavaScript import map) -->
+  <title>RealtimeSearchApp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <!-- Include jQuery for simplicity -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- CSS styling -->
+  <style>
+    body {
+      text-align: center;
     }
 
-    // Update the previous search query and display regardless of completeness
-    previousSearchQuery = searchQuery;
-    displaySearchResult(searchQuery);
-  }
-}
-
-      function displaySearchResult(query) {
-        searchResultsDiv.html(`<p>${query}</p>`);
-      }
-
-      function logSearch(query) {
-        // Send an AJAX request or use a WebSocket to log the search query on the backend
-        // You can include user-specific information (e.g., IP) in the request
-        $.post('/search', { query: query });
-      }
-
-      // Function to analyze search queries
-function analyzeSearchQuery(searchQuery) {
-  // Check for basic sentence completeness
-  if (isCompleteSentence(searchQuery)) {
-    console.log(`User searched for: "${searchQuery}"`);
-  } else {
-    // Apply heuristic checks for completeness
-    const isComplete = checkCompletenessUsingHeuristics(searchQuery);
-    if (isComplete) {
-      console.log(`User searched for: "${searchQuery}"`);
-    } else {
-      console.log(`Incomplete search query: "${searchQuery}"`);
-      storeIncompleteSearch(searchQuery);
+    #searchBar {
+      margin-top: 20px;
     }
-  }
-}
 
-// Function to check for completeness using heuristics
-function checkCompletenessUsingHeuristics(sentence) {
-  const minLengthForCompleteness = 10; // Adjust as needed
-  const keywordsForCompleteness = ["how", "why", "what", "where", "when"]; // Expand as needed
-
-  const trimmedSentence = sentence.trim().toLowerCase();
-
-  if (trimmedSentence.length >= minLengthForCompleteness) {
-    return keywordsForCompleteness.some(keyword => trimmedSentence.includes(keyword));
-  }
-
-  return false;
-}
-
-// Function to store incomplete searches for summarization
-let incompleteSearches = [];
-function storeIncompleteSearch(searchQuery) {
-  incompleteSearches.push(searchQuery);
-
-  // Periodically summarize incomplete searches (e.g., every 5 seconds)
-  setTimeout(summarizeIncompleteSearches, 5000);
-}
-
-// Function to summarize incomplete searches
-function summarizeIncompleteSearches() {
-  if (incompleteSearches.length > 0) {
-    const summary = summarizeText(incompleteSearches.join(" ")); // Use a text summarization library
-    incompleteSearches = []; // Clear the stored searches
-
-    // Send the summary to the backend or display it to the user
-    console.log(`Summary of incomplete searches: ${summary}`);
-    //logSearch(summary) line has been removed from the summarizeIncompleteSearches function, ensuring that only valid questions are sent to the backend.
-    
-    {
-      /* 
-        logSearch(summary); 
-     */
+    #searchResults {
+      margin-top: 10px;
     }
-  }
-}
+  </style>
+</head>
+<body>
+  <!-- Search input and results container -->
+  <div id="searchBar">
+    <input type="text" id="searchBox" placeholder="Search..." oninput="handleSearch()">
+  </div>
+  <div id="searchResults"></div>
 
-// Placeholder function for text summarization (replace with actual implementation)
-function summarizeText(text) {
-  // Use a text summarization library or custom algorithm
-  // For now, returning the first 50 characters as a simple placeholder
-  return text.substring(0, 50);
-}
+  <script>
+    // Global variables
+    const searchBox = $('#searchBox');
+    const searchResultsDiv = $('#searchResults');
+    let typingTimer;
+    let previousSearchQuery = '';
+    let incompleteSearches = [];
 
-      // Example usage
-      const userSearches = [
-        "how to learn JavaScript.",
-        "best programming courses",
-        "JavaScript frameworks",
-        "machine learning tutorials?"
-      ];
+    // Function to check if a string is a complete sentence
+    function isCompleteSentence(sentence) {
+      return sentence.trim().endsWith('.') || sentence.trim().endsWith('!') || sentence.trim().endsWith('?');
+    }
 
-      // Summarize searches and check completeness using the enhanced heuristic
-      for (const searchQuery of userSearches) {
-        const isComplete = checkCompletenessUsingLanguageProcessing(searchQuery);
+    // Function to check for completeness using language processing (replace with actual implementation)
+    function checkCompletenessUsingLanguageProcessing(sentence) {
+      const minLengthForCompleteness = 10;
+      const keywordsForCompleteness = ["how", "why"];
+
+      const trimmedSentence = sentence.trim().toLowerCase();
+      const endsWithPunctuation = /[.!?]$/.test(trimmedSentence);
+
+      const isComplete =
+        trimmedSentence.length >= minLengthForCompleteness &&
+        (keywordsForCompleteness.some(keyword => trimmedSentence.includes(keyword)) || endsWithPunctuation);
+
+      return isComplete;
+    }
+
+    // Function triggered on user input
+    function handleSearch() {
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(sendSearchQuery, 15);
+    }
+
+    // Function to send search query
+    function sendSearchQuery() {
+      const searchQuery = searchBox.val().trim();
+
+      if (searchQuery !== "") {
+        // Analyze the search query for completeness
+        const isComplete = isCompleteSentence(searchQuery);
+
+        // Log the search query with completeness status
         const summary = isComplete ? "Complete" : "Incomplete";
         console.log(`User searched for: "${searchQuery}" (${summary})`);
+
+        // Only log the searchQuery if it's a valid question
+        if (isComplete) {
+          logSearch(searchQuery);
+        }
+
+        // Update the previous search query and display regardless of completeness
+        previousSearchQuery = searchQuery;
+        displaySearchResult(searchQuery);
       }
-    </script>
-  </body>
+    }
+
+    // Function to display search result
+    function displaySearchResult(query) {
+      searchResultsDiv.html(`<p>${query}</p>`);
+    }
+
+    // Function to log search on the backend
+    function logSearch(query) {
+      $.post('/search', { query: query })
+        .done(function(data) {
+          // Handle success, if needed
+        })
+        .fail(function(error) {
+          console.error(`Error logging search query: ${error.statusText}`);
+        });
+    }
+
+    // Function to analyze search queries
+    function analyzeSearchQuery(searchQuery) {
+      if (isCompleteSentence(searchQuery)) {
+        console.log(`User searched for: "${searchQuery}"`);
+      } else {
+        // Apply heuristic checks for completeness
+        const isComplete = checkCompletenessUsingHeuristics(searchQuery);
+        if (isComplete) {
+          console.log(`User searched for: "${searchQuery}"`);
+        } else {
+          console.log(`Incomplete search query: "${searchQuery}"`);
+          storeIncompleteSearch(searchQuery);
+        }
+      }
+    }
+
+    // Function to check for completeness using heuristics
+    function checkCompletenessUsingHeuristics(sentence) {
+      const minLengthForCompleteness = 10;
+      const keywordsForCompleteness = ["how", "why", "what", "where", "when"];
+
+      const trimmedSentence = sentence.trim().toLowerCase();
+
+      if (trimmedSentence.length >= minLengthForCompleteness) {
+        return keywordsForCompleteness.some(keyword => trimmedSentence.includes(keyword));
+      }
+
+      return false;
+    }
+
+    // Function to store incomplete searches for summarization
+    function storeIncompleteSearch(searchQuery) {
+      incompleteSearches.push(searchQuery);
+      // Periodically summarize incomplete searches (e.g., every 5 seconds)
+      setTimeout(summarizeIncompleteSearches, 5000);
+    }
+
+    // Function to summarize incomplete searches
+    function summarizeIncompleteSearches() {
+      // Check if there are any incomplete searches stored
+      // Check if there are incomplete searches to process
+      if (incompleteSearches.length > 0) {
+          // Loop through each incomplete search query
+        // Process each incomplete search query individually
+        incompleteSearches.forEach((searchQuery) => {
+          // Check completeness using heuristics
+           // Check if the search query is now considered complete
+          const isComplete = checkCompletenessUsingHeuristics(searchQuery);
+          // Determine completeness status for logging
+          const summary = isComplete ? "Complete" : "Incomplete";
+          // Log the search query with completeness status
+          if (isComplete) {
+            console.log(`User searched for: "${searchQuery}" (${summary})`);
+            // Log the complete search query on the backend
+            logSearch(searchQuery);
+          } else {
+            console.log(`User searched for: "${searchQuery}" (${summary})`);
+             // Store the incomplete search query for later processing
+            storeIncompleteSearch(searchQuery);
+          }
+        });
+
+        const summary = summarizeText(incompleteSearches.join(" "));
+        incompleteSearches = [];
+        console.log(`Summary of incomplete searches: ${summary}`);
+      }
+    }
+
+    // Placeholder function for text summarization (replace with actual implementation)
+    function summarizeText(text) {
+      return text.substring(0, 50);
+    }
+
+    // Example usage
+    const userSearches = [
+      "how to learn JavaScript.",
+      "best programming courses",
+      "JavaScript frameworks",
+      "machine learning tutorials?"
+    ];
+
+    // Summarize searches and check completeness using the enhanced heuristic
+    for (const searchQuery of userSearches) {
+      const isComplete = checkCompletenessUsingLanguageProcessing(searchQuery);
+      const summary = isComplete ? "Complete" : "Incomplete";
+      console.log(`User searched for: "${searchQuery}" (${summary})`);
+    }
+  </script>
+</body>
 </html>
