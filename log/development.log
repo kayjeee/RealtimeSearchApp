@@ -54,3 +54,311 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 263ms (Views: 230.6ms | ActiveRecord: 0.0ms | Allocations: 905)
 
 
+Started GET "/" for ::1 at 2024-01-12 13:03:31 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.1ms | Allocations: 523)
+Completed 200 OK in 116ms (Views: 38.2ms | ActiveRecord: 0.0ms | Allocations: 4759)
+
+
+Started GET "/" for ::1 at 2024-01-12 13:03:45 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.1ms | Allocations: 272)
+Completed 200 OK in 22ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 910)
+
+
+Started GET "/" for ::1 at 2024-01-12 13:04:42 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 14)
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 226)
+
+
+Started GET "/search" for ::1 at 2024-01-12 13:04:48 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/search"):
+  
+Started GET "/analytics" for ::1 at 2024-01-12 13:05:14 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (16.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 12.6ms | Allocations: 178)
+  Rendered layout layouts/application.html.erb (Duration: 3469.4ms | Allocations: 88310)
+Completed 200 OK in 3536ms (Views: 3490.6ms | ActiveRecord: 17.5ms | Allocations: 91106)
+
+
+Started POST "/search" for ::1 at 2024-01-12 13:05:31 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:05:34 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:05:40 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:05:43 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:05:44 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:05:45 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started GET "/" for ::1 at 2024-01-12 13:07:55 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.4ms | Allocations: 275)
+Completed 200 OK in 15ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 907)
+
+
+Started GET "/" for ::1 at 2024-01-12 13:07:58 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 13)
+Completed 200 OK in 38ms (Views: 30.8ms | ActiveRecord: 0.0ms | Allocations: 222)
+
+
+Started GET "/" for ::1 at 2024-01-12 13:08:01 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.8/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 13)
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 221)
+
+
+Started GET "/" for ::1 at 2024-01-12 13:08:36 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 3.9ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 103.1ms | Allocations: 15273)
+Completed 200 OK in 144ms (Views: 123.1ms | ActiveRecord: 2.2ms | Allocations: 17759)
+
+
+Started POST "/search" for ::1 at 2024-01-12 13:11:07 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:11:30 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:12:22 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:12:25 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started GET "/" for ::1 at 2024-01-12 13:14:48 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.2ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 75.0ms | Allocations: 2029)
+Completed 200 OK in 111ms (Views: 93.8ms | ActiveRecord: 1.1ms | Allocations: 3543)
+
+
+Started POST "/search" for ::1 at 2024-01-12 13:23:00 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:23:09 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:23:10 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:23:10 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:23:12 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:23:13 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started GET "/" for ::1 at 2024-01-12 13:23:23 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 1506)
+Completed 200 OK in 34ms (Views: 21.5ms | ActiveRecord: 1.5ms | Allocations: 2489)
+
+
+Started GET "/" for ::1 at 2024-01-12 13:23:55 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 1504)
+Completed 200 OK in 34ms (Views: 19.9ms | ActiveRecord: 0.3ms | Allocations: 2356)
+
+
+Started POST "/search" for ::1 at 2024-01-12 13:30:36 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:30:38 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started POST "/search" for ::1 at 2024-01-12 13:30:44 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started GET "/" for ::1 at 2024-01-12 13:31:00 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 1494)
+Completed 200 OK in 43ms (Views: 32.5ms | ActiveRecord: 0.8ms | Allocations: 2465)
+
+
+Started GET "/" for ::1 at 2024-01-12 13:39:47 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.5ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 162.2ms | Allocations: 2055)
+Completed 200 OK in 186ms (Views: 175.3ms | ActiveRecord: 0.7ms | Allocations: 3567)
+
+
+Started POST "/search" for ::1 at 2024-01-12 13:40:10 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started GET "/" for ::1 at 2024-01-12 13:40:24 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 1488)
+Completed 200 OK in 22ms (Views: 11.3ms | ActiveRecord: 0.4ms | Allocations: 2353)
+
+
+Started POST "/search" for ::1 at 2024-01-12 13:40:58 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started GET "/" for ::1 at 2024-01-12 13:41:09 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1500)
+Completed 200 OK in 20ms (Views: 9.6ms | ActiveRecord: 0.4ms | Allocations: 2354)
+
+
+Started POST "/search" for ::1 at 2024-01-12 13:43:02 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started GET "/" for ::1 at 2024-01-12 13:43:09 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 1491)
+Completed 200 OK in 33ms (Views: 21.7ms | ActiveRecord: 0.5ms | Allocations: 2345)
+
+
+Started POST "/search" for ::1 at 2024-01-12 13:43:29 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started GET "/" for ::1 at 2024-01-12 13:43:34 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 1506)
+Completed 200 OK in 59ms (Views: 22.9ms | ActiveRecord: 0.3ms | Allocations: 2361)
+
+
+Started GET "/" for ::1 at 2024-01-12 13:43:37 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 1500)
+Completed 200 OK in 22ms (Views: 14.4ms | ActiveRecord: 0.3ms | Allocations: 2352)
+
+
+Started POST "/search" for ::1 at 2024-01-12 13:43:49 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/search"):
+  
+Started GET "/" for ::1 at 2024-01-12 13:44:20 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 1515)
+Completed 200 OK in 19ms (Views: 11.0ms | ActiveRecord: 0.3ms | Allocations: 2369)
+
+
+Started GET "/" for ::1 at 2024-01-12 13:44:45 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 1500)
+Completed 200 OK in 18ms (Views: 10.9ms | ActiveRecord: 0.3ms | Allocations: 2352)
+
+
+Started GET "/" for ::1 at 2024-01-12 13:44:47 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:11:in `analytics'
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 1491)
+Completed 200 OK in 22ms (Views: 13.5ms | ActiveRecord: 0.3ms | Allocations: 2343)
+
+
