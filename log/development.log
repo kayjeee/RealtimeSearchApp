@@ -11992,3 +11992,72 @@ Completed 200 OK in 199ms (Views: 188.9ms | ActiveRecord: 0.6ms | Allocations: 1
   [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::InternalMetadata Load (31.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToSearches (20240113091002)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (60.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asearches" ("id" integer NOT NULL PRIMARY KEY, "query" varchar DEFAULT NULL, "ip" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_asearches_on_user_id" ON "asearches" ("user_id")[0m
+  [1m[35m (14.2ms)[0m  [1m[32mINSERT INTO "asearches" ("id","query","ip","created_at","updated_at","user_id")
+                     SELECT "id","query","ip","created_at","updated_at","user_id" FROM "searches"[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE "searches"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "searches" ("id" integer NOT NULL PRIMARY KEY, "query" varchar DEFAULT NULL, "ip" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_searches_on_user_id" ON "searches" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "searches" ("id","query","ip","created_at","updated_at","user_id")
+                     SELECT "id","query","ip","created_at","updated_at","user_id" FROM "asearches"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "asearches"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asearches" ("id" integer NOT NULL PRIMARY KEY, "query" varchar DEFAULT NULL, "ip" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_asearches_on_user_id" ON "asearches" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asearches" ("id","query","ip","created_at","updated_at","user_id")
+                     SELECT "id","query","ip","created_at","updated_at","user_id" FROM "searches"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "searches"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "searches" ("id" integer NOT NULL PRIMARY KEY, "query" varchar DEFAULT NULL, "ip" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "searches" ("id","query","ip","created_at","updated_at")
+                     SELECT "id","query","ip","created_at","updated_at" FROM "asearches"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "asearches"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20240113091002"]]
+  [1m[36mTRANSACTION (187.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToSearches (20240113091002)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "searches" ADD "user_id" integer[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_searches_on_user_id" ON "searches" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asearches" ("id" integer NOT NULL PRIMARY KEY, "query" varchar DEFAULT NULL, "ip" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_asearches_on_user_id" ON "asearches" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "asearches" ("id","query","ip","created_at","updated_at","user_id")
+                     SELECT "id","query","ip","created_at","updated_at","user_id" FROM "searches"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE "searches"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "searches" ("id" integer NOT NULL PRIMARY KEY, "query" varchar DEFAULT NULL, "ip" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_e192b86393"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_searches_on_user_id" ON "searches" ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "searches" ("id","query","ip","created_at","updated_at","user_id")
+                     SELECT "id","query","ip","created_at","updated_at","user_id" FROM "asearches"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "asearches"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240113091002"]]
+  [1m[36mTRANSACTION (194.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
