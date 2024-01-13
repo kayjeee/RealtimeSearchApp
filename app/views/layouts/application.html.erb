@@ -34,7 +34,7 @@
   </div>
   <div id="searchResults"></div>
 
-<!-- User Log Table -->
+  <!-- User Log Table -->
   <table id="userLogTable">
     <thead>
       <tr>
@@ -47,7 +47,7 @@
     </tbody>
   </table>
 
- <script>
+  <script>
     // Global variables
     const searchBox = $('#searchBox');
     const searchResultsDiv = $('#searchResults');
@@ -121,17 +121,22 @@
         headers: {
           'X-CSRF-Token': csrfToken
         },
-        success: function(data) {
+        success: function (data) {
           // Check if data is defined and has the 'ip' property before extracting the IP address
           if (data && data.ip) {
             // Extract the IP address from the response and add to the user log table if the question is valid
             const ip = data.ip;
-            addToUserLogTable(ip, query);
+            // Check if the question is valid before adding it to the table
+            if (isCompleteSentence(query)) {
+              addToUserLogTable(ip, query);
+            } else {
+              console.log(`Invalid search query: "${query}"`);
+            }
           } else {
             console.error(`Error: Invalid data received from the server`);
           }
         },
-        error: function(error) {
+        error: function (error) {
           console.error(`Error logging search query: ${error.statusText}`);
         }
       });
@@ -142,12 +147,6 @@
       userLogTableBody.append(`<tr><td>${ip}</td><td>${query}</td></tr>`);
     }
 
-    // Function to display search result
-    function displaySearchResult(query, ip) {
-      searchResultsDiv.html(`<p>${query}</p>`);
-      // Add the search result to the user log table with the actual IP address
-      addToUserLogTable(ip, query);
-    }
     // Function to analyze search queries
     function analyzeSearchQuery(searchQuery) {
       if (isCompleteSentence(searchQuery)) {
@@ -188,13 +187,10 @@
     // Function to summarize incomplete searches
     function summarizeIncompleteSearches() {
       // Check if there are any incomplete searches stored
-      // Check if there are incomplete searches to process
       if (incompleteSearches.length > 0) {
-          // Loop through each incomplete search query
-        // Process each incomplete search query individually
+        // Loop through each incomplete search query
         incompleteSearches.forEach((searchQuery) => {
           // Check completeness using heuristics
-           // Check if the search query is now considered complete
           const isComplete = checkCompletenessUsingHeuristics(searchQuery);
           // Determine completeness status for logging
           const summary = isComplete ? "Complete" : "Incomplete";
@@ -205,12 +201,13 @@
             logSearch(searchQuery);
           } else {
             console.log(`User searched for: "${searchQuery}" (${summary})`);
-             // Store the incomplete search query for later processing
+            // Store the incomplete search query for later processing
             storeIncompleteSearch(searchQuery);
             logSearch(summary);
           }
         });
 
+        // Summarize incomplete searches
         const summary = summarizeText(incompleteSearches.join(" "));
         incompleteSearches = [];
         console.log(`Summary of incomplete searches: ${summary}`);
