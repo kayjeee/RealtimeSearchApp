@@ -5362,3 +5362,345 @@ Completed 200 OK in 264ms (Views: 251.4ms | ActiveRecord: 2.6ms | Allocations: 4
   [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2024-01-13 06:46:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 3.9ms | Allocations: 412)
+  Rendered layout layouts/application.html.erb (Duration: 330.0ms | Allocations: 33062)
+Completed 200 OK in 424ms (Views: 354.3ms | ActiveRecord: 1.0ms | Allocations: 39294)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:46:48 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 796)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:46:59 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who was it last night?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? LIMIT ?[0m  [["query", "who was it last night?"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:43:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+  [1m[36mSearch Create (1.9ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "who was it last night?"], ["ip", "::1"], ["created_at", "2024-01-13 04:46:59.350409"], ["updated_at", "2024-01-13 04:46:59.350409"]]
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+  [1m[36mTRANSACTION (227.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"::1", :query=>"who was it last night?"}}
+Search successful for IP: ::1, Query: who was it last night?
+Completed 200 OK in 347ms (Views: 0.4ms | ActiveRecord: 231.7ms | Allocations: 10284)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:47:02 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"who was it last night?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 11)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 1514)
+Completed 200 OK in 33ms (Views: 22.6ms | ActiveRecord: 0.6ms | Allocations: 2420)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:47:03 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 951)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:47:12 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who was it last night?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? LIMIT ?[0m  [["query", "who was it last night?"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:43:in `duplicate_entry?'
+Search successful for IP: ::1, Query: who was it last night?
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 870)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:47:17 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"who was it last night?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 1510)
+Completed 200 OK in 23ms (Views: 14.4ms | ActiveRecord: 0.4ms | Allocations: 2390)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:47:17 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 848)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:47:23 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (1.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"who was it last night?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 1489)
+Completed 200 OK in 41ms (Views: 26.0ms | ActiveRecord: 1.5ms | Allocations: 2369)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:47:24 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 0.3ms | Allocations: 848)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:47:33 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who shot the guy?"}
+  [1m[36mSearch Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? LIMIT ?[0m  [["query", "who shot the guy?"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:43:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+  [1m[36mSearch Create (3.1ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "who shot the guy?"], ["ip", "::1"], ["created_at", "2024-01-13 04:47:33.232383"], ["updated_at", "2024-01-13 04:47:33.232383"]]
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+  [1m[36mTRANSACTION (135.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"::1", :query=>"who shot the guy?"}}
+Search successful for IP: ::1, Query: who shot the guy?
+Completed 200 OK in 168ms (Views: 0.4ms | ActiveRecord: 139.3ms | Allocations: 2793)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:47:36 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"who shot the guy?"=>1, "who was it last night?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 1520)
+Completed 200 OK in 68ms (Views: 27.5ms | ActiveRecord: 0.4ms | Allocations: 2418)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:47:36 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 14ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 984)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:47:40 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (1.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"who shot the guy?"=>1, "who was it last night?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 1517)
+Completed 200 OK in 32ms (Views: 19.0ms | ActiveRecord: 1.4ms | Allocations: 2410)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:47:40 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 20ms (Views: 8.1ms | ActiveRecord: 0.6ms | Allocations: 984)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:48:04 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"wher ca  go?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? LIMIT ?[0m  [["query", "wher ca  go?"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:43:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+  [1m[36mSearch Create (2.9ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "wher ca  go?"], ["ip", "::1"], ["created_at", "2024-01-13 04:48:04.406166"], ["updated_at", "2024-01-13 04:48:04.406166"]]
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+  [1m[36mTRANSACTION (174.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"::1", :query=>"wher ca  go?"}}
+Search successful for IP: ::1, Query: wher ca  go?
+Completed 200 OK in 213ms (Views: 0.4ms | ActiveRecord: 178.1ms | Allocations: 2757)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 06:50:05 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 1522)
+Completed 200 OK in 20ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 2432)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 06:50:06 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 1120)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 06:50:15 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 1512)
+Completed 200 OK in 19ms (Views: 10.6ms | ActiveRecord: 0.3ms | Allocations: 2420)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 06:50:17 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 20ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 1120)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 06:50:48 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 16)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 1509)
+Completed 200 OK in 18ms (Views: 9.5ms | ActiveRecord: 0.4ms | Allocations: 2419)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 06:50:50 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 11ms (Views: 5.3ms | ActiveRecord: 0.5ms | Allocations: 1120)
+
+
+Started POST "/search" for 102.215.236.24 at 2024-01-13 06:51:04 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who?"}
+  [1m[36mSearch Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? LIMIT ?[0m  [["query", "who?"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:43:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+  [1m[36mSearch Create (3.2ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "who?"], ["ip", "102.215.236.24"], ["created_at", "2024-01-13 04:51:04.924903"], ["updated_at", "2024-01-13 04:51:04.924903"]]
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+  [1m[36mTRANSACTION (105.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"102.215.236.24", :query=>"who?"}}
+Search successful for IP: 102.215.236.24, Query: who?
+Completed 200 OK in 125ms (Views: 0.3ms | ActiveRecord: 109.0ms | Allocations: 2774)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 06:51:13 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 19)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 1521)
+Completed 200 OK in 18ms (Views: 9.4ms | ActiveRecord: 0.3ms | Allocations: 2446)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 06:51:15 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 25ms (Views: 10.5ms | ActiveRecord: 0.4ms | Allocations: 1257)
+
+
+Started POST "/search" for 102.215.236.24 at 2024-01-13 06:51:38 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who was it last?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? LIMIT ?[0m  [["query", "who was it last?"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:43:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+  [1m[36mSearch Create (1.7ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "who was it last?"], ["ip", "102.215.236.24"], ["created_at", "2024-01-13 04:51:38.825699"], ["updated_at", "2024-01-13 04:51:38.825699"]]
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+  [1m[36mTRANSACTION (94.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"102.215.236.24", :query=>"who was it last?"}}
+Search successful for IP: 102.215.236.24, Query: who was it last?
+Completed 200 OK in 115ms (Views: 0.2ms | ActiveRecord: 97.0ms | Allocations: 2798)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 06:51:42 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1530)
+Completed 200 OK in 22ms (Views: 11.2ms | ActiveRecord: 0.4ms | Allocations: 2470)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 06:51:44 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 44ms (Views: 13.3ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started POST "/search" for 102.215.236.24 at 2024-01-13 06:52:04 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who was it last night?"}
+  [1m[36mSearch Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? LIMIT ?[0m  [["query", "who was it last night?"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:43:in `duplicate_entry?'
+Search successful for IP: 102.215.236.24, Query: who was it last night?
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 888)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 06:52:09 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 1524)
+Completed 200 OK in 20ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 2463)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 06:52:10 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 59ms (Views: 38.0ms | ActiveRecord: 1.4ms | Allocations: 1393)
+
+
