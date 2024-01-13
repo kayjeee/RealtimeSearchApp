@@ -10,13 +10,13 @@ class SearchController < ApplicationController
       log_search(query, ip)
 
       # Broadcast the search result
-      ActionCable.server.broadcast('search_channel', { search_result: { ip: ip, query: query } })
+      ActionCable.server.broadcast('search_channel', { search_result: { ip:, query: } })
     end
 
     # Log IP in the Rails logs
     Rails.logger.info("Search successful for IP: #{ip}, Query: #{query}")
 
-    render json: { status: 'success', ip: ip } # Include IP in the response
+    render json: { status: 'success', ip: } # Include IP in the response
   end
 
   def analytics
@@ -40,7 +40,7 @@ class SearchController < ApplicationController
 
   def log_search(query, ip)
     # Log the search query along with IP (e.g., save to a database)
-    Search.create(query: query, ip: ip)
+    Search.create(query:, ip:)
   end
 
   def retrieve_trends
@@ -53,6 +53,6 @@ class SearchController < ApplicationController
 
   def duplicate_entry?(query)
     # Check for a duplicate entry with the same query
-    Search.exists?(query: query)
+    Search.exists?(query:)
   end
 end
