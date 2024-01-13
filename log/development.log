@@ -8295,3 +8295,2343 @@ ActionView::Template::Error (The asset "custom_styles.css" is not present in the
     19:   <!-- Search input and results container -->
   
 app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2024-01-13 08:16:30 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (9.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 4.5ms | Allocations: 435)
+  Rendered layout layouts/application.html.erb (Duration: 689.9ms | Allocations: 43896)
+Completed 500 Internal Server Error in 900ms (ActiveRecord: 1.8ms | Allocations: 51295)
+
+
+  
+ActionView::Template::Error (The asset "custom_styles.css" is not present in the asset pipeline.
+):
+    13:   <!-- Include jQuery for simplicity -->
+    14:   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    15:   <!-- CSS styling -->
+    16: <%= stylesheet_link_tag "custom_styles" %>
+    17: </head>
+    18: <body>
+    19:   <!-- Search input and results container -->
+  
+app/views/layouts/application.html.erb:16
+Started GET "/" for ::1 at 2024-01-13 08:19:23 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 110.5ms | Allocations: 3039)
+Completed 200 OK in 152ms (Views: 133.3ms | ActiveRecord: 0.8ms | Allocations: 4587)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:19:24 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.1ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 345ms (Views: 336.2ms | ActiveRecord: 2.4ms | Allocations: 11245)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:24:17 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.3ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 109.0ms | Allocations: 4223)
+Completed 200 OK in 121ms (Views: 111.1ms | ActiveRecord: 0.4ms | Allocations: 5177)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:24:17 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:24:25 +0200
+Started GET "/trends" for ::1 at 2024-01-13 08:24:25 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1940)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 3423)
+Completed 200 OK in 40ms (Views: 22.0ms | ActiveRecord: 0.4ms | Allocations: 4450)
+
+
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 17.8ms | Allocations: 1588)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 3061)
+Completed 200 OK in 41ms (Views: 28.4ms | ActiveRecord: 0.4ms | Allocations: 4004)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:24:25 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 25ms (Views: 17.4ms | ActiveRecord: 1.6ms | Allocations: 1393)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:24:29 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 12.9ms | Allocations: 1597)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 3070)
+Completed 200 OK in 34ms (Views: 24.4ms | ActiveRecord: 0.4ms | Allocations: 4014)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:24:29 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 20ms (Views: 7.3ms | ActiveRecord: 1.3ms | Allocations: 1393)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:28:06 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 60.4ms | Allocations: 3171)
+  Rendered layout layouts/application.html.erb (Duration: 65.4ms | Allocations: 4639)
+Completed 200 OK in 83ms (Views: 67.4ms | ActiveRecord: 1.1ms | Allocations: 5570)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:28:07 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 42ms (Views: 21.6ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:28:31 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 12.9ms | Allocations: 1873)
+  Rendered layout layouts/application.html.erb (Duration: 67.2ms | Allocations: 3977)
+Completed 200 OK in 97ms (Views: 82.3ms | ActiveRecord: 0.5ms | Allocations: 5454)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:28:32 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 24ms (Views: 14.9ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:28:46 +0200
+Started GET "/trends" for ::1 at 2024-01-13 08:28:46 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 17.8ms | Allocations: 1592)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 3066)
+Completed 200 OK in 46ms (Views: 29.4ms | ActiveRecord: 0.4ms | Allocations: 4018)
+
+
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1539)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 3007)
+Completed 200 OK in 27ms (Views: 15.5ms | ActiveRecord: 0.4ms | Allocations: 3938)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:28:46 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.8ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 50ms (Views: 19.2ms | ActiveRecord: 0.8ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:28:50 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.7ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 2264)
+Completed 200 OK in 29ms (Views: 15.5ms | ActiveRecord: 0.4ms | Allocations: 3258)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:28:51 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:29:53 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.7ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | Allocations: 2981)
+Completed 200 OK in 77ms (Views: 66.3ms | ActiveRecord: 0.4ms | Allocations: 4463)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:29:53 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 57ms (Views: 41.9ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:29:58 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 2109)
+Completed 200 OK in 29ms (Views: 16.8ms | ActiveRecord: 0.3ms | Allocations: 3049)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:29:58 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 32ms (Views: 22.8ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:31:14 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.3ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 3005)
+Completed 200 OK in 98ms (Views: 76.2ms | ActiveRecord: 0.7ms | Allocations: 4490)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:31:14 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.7ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 29ms (Views: 19.4ms | ActiveRecord: 0.7ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:31:49 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.3ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 57.2ms | Allocations: 3705)
+Completed 200 OK in 71ms (Views: 59.9ms | ActiveRecord: 0.5ms | Allocations: 4646)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:31:50 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.7ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 38ms (Views: 15.3ms | ActiveRecord: 0.7ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:32:28 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.3ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 64.2ms | Allocations: 3700)
+Completed 200 OK in 85ms (Views: 74.4ms | ActiveRecord: 0.4ms | Allocations: 4639)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:32:29 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.1ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 35ms (Views: 10.1ms | ActiveRecord: 1.1ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:34:35 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 3714)
+Completed 200 OK in 63ms (Views: 50.6ms | ActiveRecord: 0.5ms | Allocations: 4653)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:34:35 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 28ms (Views: 14.1ms | ActiveRecord: 1.4ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:35:58 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 54.0ms | Allocations: 3728)
+Completed 200 OK in 67ms (Views: 56.6ms | ActiveRecord: 0.4ms | Allocations: 4667)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:35:58 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.7ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 57ms (Views: 36.8ms | ActiveRecord: 1.7ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:36:01 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 2103)
+Completed 200 OK in 25ms (Views: 13.8ms | ActiveRecord: 0.7ms | Allocations: 3042)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:36:01 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 24ms (Views: 9.9ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:36:22 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 51.0ms | Allocations: 3708)
+Completed 200 OK in 64ms (Views: 53.1ms | ActiveRecord: 0.4ms | Allocations: 4647)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:36:23 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (4.0ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 49ms (Views: 37.3ms | ActiveRecord: 4.0ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:38:25 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.8ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 78.9ms | Allocations: 2993)
+Completed 200 OK in 119ms (Views: 99.9ms | ActiveRecord: 0.7ms | Allocations: 4478)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:38:26 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.8ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 18ms (Views: 8.7ms | ActiveRecord: 0.8ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:38:48 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.3ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 75.6ms | Allocations: 2997)
+Completed 200 OK in 109ms (Views: 90.4ms | ActiveRecord: 0.4ms | Allocations: 4483)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:38:49 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 27ms (Views: 8.4ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:39:26 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.6ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 2995)
+Completed 200 OK in 76ms (Views: 64.2ms | ActiveRecord: 0.7ms | Allocations: 4478)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:39:26 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 27ms (Views: 17.7ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 08:39:39 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2124)
+Completed 200 OK in 21ms (Views: 9.7ms | ActiveRecord: 0.7ms | Allocations: 3064)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:39:40 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.2ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 104ms (Views: 62.1ms | ActiveRecord: 1.2ms | Allocations: 1393)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:40:11 +0200
+Started GET "/trends" for ::1 at 2024-01-13 08:40:11 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1855)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 3327)
+Completed 200 OK in 37ms (Views: 17.5ms | ActiveRecord: 0.3ms | Allocations: 4354)
+
+
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1521)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 2989)
+Completed 200 OK in 21ms (Views: 13.6ms | ActiveRecord: 0.3ms | Allocations: 3920)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:40:12 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 18ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:40:17 +0200
+Started GET "/trends" for ::1 at 2024-01-13 08:40:17 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1590)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 3062)
+Completed 200 OK in 32ms (Views: 17.6ms | ActiveRecord: 0.4ms | Allocations: 4025)
+
+
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1527)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 2995)
+Completed 200 OK in 21ms (Views: 11.9ms | ActiveRecord: 0.4ms | Allocations: 3926)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:40:18 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 48ms (Views: 35.1ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started POST "/search" for ::1 at 2024-01-13 08:40:49 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"wher?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? LIMIT ?[0m  [["query", "wher?"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:56:in `duplicate_entry?'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"::1", :query=>"wher?"}}
+Search successful for IP: ::1, Query: wher?
+Completed 200 OK in 242ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 5834)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:40:52 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1527)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2995)
+Completed 200 OK in 22ms (Views: 12.9ms | ActiveRecord: 0.4ms | Allocations: 3935)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:40:53 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.9ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 23ms (Views: 14.9ms | ActiveRecord: 0.9ms | Allocations: 1394)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:40:56 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1539)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3007)
+Completed 200 OK in 21ms (Views: 13.6ms | ActiveRecord: 0.3ms | Allocations: 3938)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:40:56 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 27ms (Views: 20.4ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:43:51 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 12.7ms | Allocations: 1861)
+  Rendered layout layouts/application.html.erb (Duration: 144.2ms | Allocations: 4326)
+Completed 200 OK in 172ms (Views: 159.0ms | ActiveRecord: 0.5ms | Allocations: 5802)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:44:10 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (7.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1867)
+  Rendered layout layouts/application.html.erb (Duration: 158.9ms | Allocations: 5904)
+Completed 200 OK in 198ms (Views: 175.6ms | ActiveRecord: 7.3ms | Allocations: 7382)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:45:02 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 19.9ms | Allocations: 1866)
+  Rendered layout layouts/application.html.erb (Duration: 89.3ms | Allocations: 4318)
+Completed 200 OK in 116ms (Views: 101.5ms | ActiveRecord: 0.4ms | Allocations: 5798)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:46:39 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (2.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 18.0ms | Allocations: 1892)
+  Rendered layout layouts/application.html.erb (Duration: 260.3ms | Allocations: 24726)
+Completed 500 Internal Server Error in 303ms (ActiveRecord: 2.4ms | Allocations: 26180)
+
+
+  
+ActionView::Template::Error (Asset `script.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link script.js
+
+and restart your server):
+    10:   <%= csp_meta_tag %>
+    11:   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    12:   <%= javascript_importmap_tags %>
+    13:   <%= javascript_include_tag 'script.js', 'data-turbo-track': 'reload' %>
+    14: 
+    15:   <!-- Include jQuery for simplicity -->
+    16:   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  
+app/views/layouts/application.html.erb:13
+Started GET "/trends" for ::1 at 2024-01-13 08:46:55 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1899)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 4357)
+Completed 200 OK in 43ms (Views: 32.9ms | ActiveRecord: 0.3ms | Allocations: 5832)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:46:57 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1537)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3704)
+Completed 200 OK in 26ms (Views: 15.3ms | ActiveRecord: 0.5ms | Allocations: 4636)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:47:18 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (2.2ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1867)
+  Rendered layout layouts/application.html.erb (Duration: 49.9ms | Allocations: 4794)
+Completed 200 OK in 75ms (Views: 62.3ms | ActiveRecord: 2.2ms | Allocations: 6268)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:48:27 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1873)
+  Rendered layout layouts/application.html.erb (Duration: 58.6ms | Allocations: 4801)
+Completed 200 OK in 81ms (Views: 70.0ms | ActiveRecord: 0.4ms | Allocations: 6276)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:54:11 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 17.3ms | Allocations: 1879)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 3611)
+Completed 200 OK in 85ms (Views: 46.6ms | ActiveRecord: 1.0ms | Allocations: 5220)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 08:54:12 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app.js"):
+  
+Started GET "/trends" for ::1 at 2024-01-13 08:54:15 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 16.0ms | Allocations: 1554)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 3026)
+Completed 200 OK in 34ms (Views: 22.2ms | ActiveRecord: 0.8ms | Allocations: 3958)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 08:54:15 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app.js"):
+  
+Started GET "/trends" for ::1 at 2024-01-13 08:54:22 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1890)
+  Rendered layout layouts/application.html.erb (Duration: 89.7ms | Allocations: 4007)
+Completed 200 OK in 146ms (Views: 120.0ms | ActiveRecord: 0.4ms | Allocations: 5481)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 08:54:22 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.1ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 46ms (Views: 12.7ms | ActiveRecord: 1.1ms | Allocations: 1418)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:56:47 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 15.3ms | Allocations: 1864)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 3595)
+Completed 200 OK in 56ms (Views: 44.5ms | ActiveRecord: 0.4ms | Allocations: 5074)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 08:56:48 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app.js"):
+  
+Started GET "/trends" for ::1 at 2024-01-13 08:56:56 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 17.4ms | Allocations: 1545)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 3017)
+Completed 200 OK in 48ms (Views: 35.0ms | ActiveRecord: 0.3ms | Allocations: 3949)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 08:56:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/app.js"):
+  
+Started GET "/trends" for ::1 at 2024-01-13 08:58:50 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 78.9ms | Allocations: 14316)
+  Rendered layout layouts/application.html.erb (Duration: 84.3ms | Allocations: 15792)
+Completed 200 OK in 112ms (Views: 87.9ms | ActiveRecord: 2.4ms | Allocations: 18368)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 08:58:56 +0200
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for ::1 at 2024-01-13 08:58:57 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 19ms (Views: 9.7ms | ActiveRecord: 4.3ms | Allocations: 2728)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:59:14 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1530)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 3002)
+Completed 200 OK in 37ms (Views: 24.2ms | ActiveRecord: 0.4ms | Allocations: 3933)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 08:59:15 +0200
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for ::1 at 2024-01-13 08:59:15 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 14ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/trends" for ::1 at 2024-01-13 08:59:22 +0200
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 29.9ms | Allocations: 1548)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 3020)
+Completed 200 OK in 50ms (Views: 34.9ms | ActiveRecord: 0.5ms | Allocations: 3951)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 08:59:23 +0200
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for ::1 at 2024-01-13 08:59:23 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (2.2ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 22ms (Views: 11.6ms | ActiveRecord: 2.2ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 09:00:33 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.9ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 2282)
+Completed 200 OK in 31ms (Views: 19.6ms | ActiveRecord: 0.4ms | Allocations: 3278)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 09:00:34 +0200
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for ::1 at 2024-01-13 09:00:34 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 23ms (Views: 9.6ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 09:00:41 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 2126)
+Completed 200 OK in 27ms (Views: 17.1ms | ActiveRecord: 0.4ms | Allocations: 3065)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 09:00:41 +0200
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for ::1 at 2024-01-13 09:00:42 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 09:01:34 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 2099)
+Completed 200 OK in 24ms (Views: 14.3ms | ActiveRecord: 1.2ms | Allocations: 3038)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 09:01:35 +0200
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for ::1 at 2024-01-13 09:01:35 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 20ms (Views: 10.0ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:01:49 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2140)
+Completed 200 OK in 20ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 3079)
+
+
+Started GET "/app.js" for 102.215.236.24 at 2024-01-13 09:01:50 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:01:51 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 28ms (Views: 10.5ms | ActiveRecord: 0.6ms | Allocations: 1393)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:02:17 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.7ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 127.6ms | Allocations: 3023)
+Completed 200 OK in 149ms (Views: 138.5ms | ActiveRecord: 0.3ms | Allocations: 4505)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:02:19 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 29ms (Views: 7.7ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:02:21 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 12ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:02:49 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 48.9ms | Allocations: 2998)
+Completed 200 OK in 72ms (Views: 60.7ms | ActiveRecord: 0.3ms | Allocations: 4481)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:02:51 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 109ms (Views: 88.2ms | ActiveRecord: 0.4ms | Allocations: 1394)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:02:52 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.2ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 1393)
+
+
+Started POST "/search" for 102.215.236.24 at 2024-01-13 09:03:05 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"what is this goin on?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? LIMIT ?[0m  [["query", "what is this goin on?"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:56:in `duplicate_entry?'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"102.215.236.24", :query=>"what is this goin on?"}}
+Search successful for IP: 102.215.236.24, Query: what is this goin on?
+Completed 200 OK in 169ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 8648)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:03:14 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 2134)
+Completed 200 OK in 27ms (Views: 14.4ms | ActiveRecord: 0.8ms | Allocations: 3077)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:03:15 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 14ms (Views: 5.8ms | ActiveRecord: 0.6ms | Allocations: 1394)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:03:17 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started POST "/search" for 102.215.236.24 at 2024-01-13 09:03:20 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"hello?"}
+  [1m[36mSearch Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? LIMIT ?[0m  [["query", "hello?"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:56:in `duplicate_entry?'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"102.215.236.24", :query=>"hello?"}}
+Search successful for IP: 102.215.236.24, Query: hello?
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1478)
+
+
+Started GET "/" for ::1 at 2024-01-13 09:04:22 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.8ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 2594)
+Completed 200 OK in 59ms (Views: 47.5ms | ActiveRecord: 0.4ms | Allocations: 4078)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 09:04:22 +0200
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for ::1 at 2024-01-13 09:04:22 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 23ms (Views: 18.0ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:04:35 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 2136)
+Completed 200 OK in 25ms (Views: 14.3ms | ActiveRecord: 0.4ms | Allocations: 3076)
+
+
+Started GET "/app.js" for 102.215.236.24 at 2024-01-13 09:04:36 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:04:37 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 19ms (Views: 12.5ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:05:10 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.5ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 50.4ms | Allocations: 3029)
+Completed 200 OK in 72ms (Views: 61.2ms | ActiveRecord: 0.3ms | Allocations: 4514)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:05:12 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.7ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 22ms (Views: 11.3ms | ActiveRecord: 0.7ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:05:13 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.2ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 1393)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:05:17 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 2122)
+Completed 200 OK in 20ms (Views: 11.8ms | ActiveRecord: 0.3ms | Allocations: 3062)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:05:19 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 35ms (Views: 13.7ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:05:20 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started POST "/search" for 102.215.236.24 at 2024-01-13 09:05:29 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"what is going here?"}
+  [1m[36mSearch Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? LIMIT ?[0m  [["query", "what is going here?"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:56:in `duplicate_entry?'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"102.215.236.24", :query=>"what is going here?"}}
+Search successful for IP: 102.215.236.24, Query: what is going here?
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1481)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:05:52 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.6ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 2597)
+Completed 200 OK in 38ms (Views: 26.3ms | ActiveRecord: 0.4ms | Allocations: 4081)
+
+
+Started GET "/app.js" for 102.215.236.24 at 2024-01-13 09:05:53 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:05:54 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 09:08:20 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 2622)
+Completed 200 OK in 110ms (Views: 45.9ms | ActiveRecord: 0.8ms | Allocations: 4105)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 09:08:21 +0200
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for ::1 at 2024-01-13 09:08:21 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.7ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 29ms (Views: 13.9ms | ActiveRecord: 0.7ms | Allocations: 1393)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:08:34 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 2145)
+Completed 200 OK in 25ms (Views: 13.1ms | ActiveRecord: 0.4ms | Allocations: 3085)
+
+
+Started GET "/app.js" for 102.215.236.24 at 2024-01-13 09:08:35 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:08:36 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.7ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 43ms (Views: 8.2ms | ActiveRecord: 0.7ms | Allocations: 1393)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:10:06 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.8ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 2623)
+Completed 200 OK in 38ms (Views: 24.7ms | ActiveRecord: 0.5ms | Allocations: 4105)
+
+
+Started GET "/app.js" for 102.215.236.24 at 2024-01-13 09:10:08 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:10:10 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 17ms (Views: 9.3ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:10:36 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 2626)
+Completed 200 OK in 42ms (Views: 30.0ms | ActiveRecord: 0.4ms | Allocations: 4109)
+
+
+Started GET "/app.js" for 102.215.236.24 at 2024-01-13 09:10:37 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:10:38 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:10:41 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.3ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 2136)
+Completed 200 OK in 31ms (Views: 19.6ms | ActiveRecord: 0.4ms | Allocations: 3076)
+
+
+Started GET "/app.js" for 102.215.236.24 at 2024-01-13 09:10:42 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:10:43 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 29ms (Views: 15.6ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:10:47 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 2136)
+Completed 200 OK in 28ms (Views: 15.5ms | ActiveRecord: 0.4ms | Allocations: 3075)
+
+
+Started GET "/app.js" for 102.215.236.24 at 2024-01-13 09:10:48 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:19:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:10:49 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 22ms (Views: 12.9ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:11:03 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.7ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 59.2ms | Allocations: 3008)
+Completed 200 OK in 87ms (Views: 72.9ms | ActiveRecord: 0.6ms | Allocations: 4490)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:11:05 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 167ms (Views: 67.6ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:11:06 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 12ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started POST "/search" for 102.215.236.24 at 2024-01-13 09:11:15 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"where are you now?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? LIMIT ?[0m  [["query", "where are you now?"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:56:in `duplicate_entry?'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"102.215.236.24", :query=>"where are you now?"}}
+Search successful for IP: 102.215.236.24, Query: where are you now?
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1481)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 09:11:23 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 2124)
+Completed 200 OK in 24ms (Views: 13.7ms | ActiveRecord: 0.4ms | Allocations: 3066)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:11:25 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.2ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 42ms (Views: 22.7ms | ActiveRecord: 1.2ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 09:11:26 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 09:11:44 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 2116)
+Completed 200 OK in 28ms (Views: 16.3ms | ActiveRecord: 0.6ms | Allocations: 3055)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 09:11:44 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 15ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 09:11:44 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 10.5ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started POST "/search" for ::1 at 2024-01-13 09:11:50 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"how do you do?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? LIMIT ?[0m  [["query", "how do you do?"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:56:in `duplicate_entry?'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"::1", :query=>"how do you do?"}}
+Search successful for IP: ::1, Query: how do you do?
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1468)
+
+
