@@ -1,10 +1,12 @@
+# app/controllers/search_controller.rb
+
 class SearchController < ApplicationController
   def search
     query = params[:query].to_s.strip
     ip = request.remote_ip
 
-    # Check if the same user (IP) with a valid question has already been logged
-    unless duplicate_entry?(query, ip)
+    # Check if the same valid question has already been logged
+    unless duplicate_entry?(query)
       log_search(query, ip)
 
       # Broadcast the search result
@@ -23,6 +25,12 @@ class SearchController < ApplicationController
     Rails.logger.info("Search analytics: #{@searches}")
   end
 
+  def user_logs
+    # Retrieve all user log entries from the database
+    @user_logs = Search.all
+    render json: @user_logs
+  end
+
   private
 
   def log_search(query, ip)
@@ -30,8 +38,8 @@ class SearchController < ApplicationController
     Search.create(query: query, ip: ip)
   end
 
-  def duplicate_entry?(query, ip)
-    # Check for a duplicate entry with the same query and IP
-    Search.exists?(query: query, ip: ip)
+  def duplicate_entry?(query)
+    # Check for a duplicate entry with the same query
+    Search.exists?(query: query)
   end
 end

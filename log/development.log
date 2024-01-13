@@ -4583,3 +4583,782 @@ Search successful for IP: 102.215.236.24, Query: why?
 Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 896)
 
 
+Started GET "/" for ::1 at 2024-01-13 06:09:50 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"wh?"=>1, "whe?"=>1, "wher?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.7ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 63.1ms | Allocations: 2257)
+Completed 200 OK in 93ms (Views: 79.5ms | ActiveRecord: 0.5ms | Allocations: 3753)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:09:55 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "who?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+Search successful for IP: ::1, Query: who?
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 890)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:13:07 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"wh?"=>1, "whe?"=>1, "wher?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.5ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 55.3ms | Allocations: 2298)
+Completed 200 OK in 89ms (Views: 69.9ms | ActiveRecord: 0.5ms | Allocations: 3801)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:13:12 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"why?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "why?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+Search successful for IP: ::1, Query: why?
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 902)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:13:43 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"wh?"=>1, "whe?"=>1, "wher?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 1556)
+Completed 200 OK in 28ms (Views: 14.9ms | ActiveRecord: 0.4ms | Allocations: 2513)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:13:47 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "who?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+Search successful for IP: ::1, Query: who?
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:16:09 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"wh?"=>1, "whe?"=>1, "wher?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.5ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 2256)
+Completed 200 OK in 79ms (Views: 63.9ms | ActiveRecord: 0.5ms | Allocations: 3754)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:16:13 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "who?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+Search successful for IP: ::1, Query: who?
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 887)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:18:22 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"wh?"=>1, "whe?"=>1, "wher?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.8ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 2265)
+Completed 200 OK in 83ms (Views: 67.1ms | ActiveRecord: 0.5ms | Allocations: 3765)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:18:25 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"why?"}
+  [1m[36mSearch Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "why?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+Search successful for IP: ::1, Query: why?
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 875)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:20:13 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"wh?"=>1, "whe?"=>1, "wher?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.4ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 51.9ms | Allocations: 2256)
+Completed 200 OK in 80ms (Views: 66.1ms | ActiveRecord: 0.6ms | Allocations: 3753)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:20:17 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"why?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "why?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+Search successful for IP: ::1, Query: why?
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 890)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:20:20 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"wh?"=>1, "whe?"=>1, "wher?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 1511)
+Completed 200 OK in 24ms (Views: 13.2ms | ActiveRecord: 0.5ms | Allocations: 2465)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:20:24 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "who?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+Search successful for IP: ::1, Query: who?
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 914)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:20:26 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"wh?"=>1, "whe?"=>1, "wher?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 40.3ms | Allocations: 1508)
+Completed 200 OK in 80ms (Views: 69.8ms | ActiveRecord: 0.4ms | Allocations: 2461)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:20:27 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"wh?"=>1, "whe?"=>1, "wher?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 1520)
+Completed 200 OK in 30ms (Views: 18.9ms | ActiveRecord: 0.4ms | Allocations: 2473)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:20:31 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "who?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+Search successful for IP: ::1, Query: who?
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 914)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:20:40 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"wh?"=>1, "whe?"=>1, "wher?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 4.4ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 85.8ms | Allocations: 2265)
+Completed 200 OK in 133ms (Views: 112.8ms | ActiveRecord: 1.0ms | Allocations: 3762)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:20:44 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "who?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+Search successful for IP: ::1, Query: who?
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 887)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:22:33 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"wh?"=>1, "whe?"=>1, "wher?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.7ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 58.9ms | Allocations: 2257)
+Completed 200 OK in 93ms (Views: 78.3ms | ActiveRecord: 0.5ms | Allocations: 3754)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:22:36 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"why?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "why?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+Search successful for IP: ::1, Query: why?
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 878)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:22:42 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"wh?"=>1, "whe?"=>1, "wher?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 25)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 1526)
+Completed 200 OK in 33ms (Views: 20.7ms | ActiveRecord: 0.5ms | Allocations: 2483)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:22:46 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "who?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+Search successful for IP: ::1, Query: who?
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 905)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:22:54 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"wher was he?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "wher was he?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mSearch Create (36.2ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "wher was he?"], ["ip", "::1"], ["created_at", "2024-01-13 04:22:54.894794"], ["updated_at", "2024-01-13 04:22:54.894794"]]
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mTRANSACTION (137.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"::1", :query=>"wher was he?"}}
+Search successful for IP: ::1, Query: wher was he?
+Completed 200 OK in 196ms (Views: 0.3ms | ActiveRecord: 173.9ms | Allocations: 2799)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:23:07 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"what can we do for?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "what can we do for?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mSearch Create (3.3ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "what can we do for?"], ["ip", "::1"], ["created_at", "2024-01-13 04:23:07.435639"], ["updated_at", "2024-01-13 04:23:07.435639"]]
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mTRANSACTION (115.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"::1", :query=>"what can we do for?"}}
+Search successful for IP: ::1, Query: what can we do for?
+Completed 200 OK in 147ms (Views: 0.6ms | ActiveRecord: 118.8ms | Allocations: 2771)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 06:23:18 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"wh?"=>1, "what can we do for?"=>1, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 1539)
+Completed 200 OK in 24ms (Views: 12.1ms | ActiveRecord: 0.4ms | Allocations: 2527)
+
+
+Started POST "/search" for 102.215.236.24 at 2024-01-13 06:23:27 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"what is your name?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "what is your name?"], ["ip", "102.215.236.24"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mSearch Create (2.0ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "what is your name?"], ["ip", "102.215.236.24"], ["created_at", "2024-01-13 04:23:27.237084"], ["updated_at", "2024-01-13 04:23:27.237084"]]
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mTRANSACTION (124.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"102.215.236.24", :query=>"what is your name?"}}
+Search successful for IP: 102.215.236.24, Query: what is your name?
+Completed 200 OK in 158ms (Views: 0.7ms | ActiveRecord: 126.9ms | Allocations: 2786)
+
+
+Started POST "/search" for 102.215.236.24 at 2024-01-13 06:23:37 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"where are you from?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "where are you from?"], ["ip", "102.215.236.24"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mSearch Create (3.3ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "where are you from?"], ["ip", "102.215.236.24"], ["created_at", "2024-01-13 04:23:38.053203"], ["updated_at", "2024-01-13 04:23:38.053203"]]
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mTRANSACTION (139.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"102.215.236.24", :query=>"where are you from?"}}
+Search successful for IP: 102.215.236.24, Query: where are you from?
+Completed 200 OK in 175ms (Views: 0.2ms | ActiveRecord: 142.8ms | Allocations: 2743)
+
+
+Started POST "/search" for 102.215.236.24 at 2024-01-13 06:24:07 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"can i help you?"}
+  [1m[36mSearch Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "can i help you?"], ["ip", "102.215.236.24"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mSearch Create (1.6ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "can i help you?"], ["ip", "102.215.236.24"], ["created_at", "2024-01-13 04:24:07.171792"], ["updated_at", "2024-01-13 04:24:07.171792"]]
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mTRANSACTION (113.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"102.215.236.24", :query=>"can i help you?"}}
+Search successful for IP: 102.215.236.24, Query: can i help you?
+Completed 200 OK in 132ms (Views: 0.2ms | ActiveRecord: 115.2ms | Allocations: 2797)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 06:24:21 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.5ms | Allocations: 40)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 1539)
+Completed 200 OK in 36ms (Views: 22.4ms | ActiveRecord: 0.4ms | Allocations: 2570)
+
+
+Started POST "/search" for 102.215.236.24 at 2024-01-13 06:26:05 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"what?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "what?"], ["ip", "102.215.236.24"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mSearch Create (2.9ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "what?"], ["ip", "102.215.236.24"], ["created_at", "2024-01-13 04:26:05.534020"], ["updated_at", "2024-01-13 04:26:05.534020"]]
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mTRANSACTION (130.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"102.215.236.24", :query=>"what?"}}
+Search successful for IP: 102.215.236.24, Query: what?
+Completed 200 OK in 155ms (Views: 0.7ms | ActiveRecord: 134.0ms | Allocations: 2791)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 06:26:11 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>1, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 1539)
+Completed 200 OK in 18ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 2583)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:28:13 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>1, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.0ms | Allocations: 216)
+  Rendered layout layouts/application.html.erb (Duration: 61.6ms | Allocations: 2292)
+Completed 200 OK in 89ms (Views: 75.0ms | ActiveRecord: 0.5ms | Allocations: 3882)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:28:19 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who is this?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "who is this?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mSearch Create (37.5ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "who is this?"], ["ip", "::1"], ["created_at", "2024-01-13 04:28:20.068163"], ["updated_at", "2024-01-13 04:28:20.068163"]]
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mTRANSACTION (109.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"::1", :query=>"who is this?"}}
+Search successful for IP: ::1, Query: who is this?
+Completed 200 OK in 167ms (Views: 0.2ms | ActiveRecord: 147.2ms | Allocations: 2786)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:28:27 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"where you from?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "where you from?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mSearch Create (25.4ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "where you from?"], ["ip", "::1"], ["created_at", "2024-01-13 04:28:27.444771"], ["updated_at", "2024-01-13 04:28:27.444771"]]
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mTRANSACTION (278.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"::1", :query=>"where you from?"}}
+Search successful for IP: ::1, Query: where you from?
+Completed 200 OK in 334ms (Views: 0.5ms | ActiveRecord: 304.6ms | Allocations: 2714)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:28:29 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>1, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>1, "who is this?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 1556)
+Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 0.5ms | Allocations: 2635)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:28:57 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>1, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>1, "who is this?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 1540)
+Completed 200 OK in 31ms (Views: 19.3ms | ActiveRecord: 1.0ms | Allocations: 2613)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:29:21 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"who?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "who?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+Search successful for IP: ::1, Query: who?
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 905)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:29:25 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"what?"}
+  [1m[36mSearch Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "what?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mSearch Create (11.9ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "what?"], ["ip", "::1"], ["created_at", "2024-01-13 04:29:25.599937"], ["updated_at", "2024-01-13 04:29:25.599937"]]
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mTRANSACTION (125.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"::1", :query=>"what?"}}
+Search successful for IP: ::1, Query: what?
+Completed 200 OK in 162ms (Views: 0.2ms | ActiveRecord: 138.7ms | Allocations: 2785)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:29:27 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>1, "who is this?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.7ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 1542)
+Completed 200 OK in 30ms (Views: 15.9ms | ActiveRecord: 0.5ms | Allocations: 2617)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:31:11 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>1, "who is this?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.4ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 108.8ms | Allocations: 2321)
+Completed 200 OK in 131ms (Views: 118.7ms | ActiveRecord: 0.5ms | Allocations: 3940)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:31:14 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>1, "who is this?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 1538)
+Completed 200 OK in 20ms (Views: 10.9ms | ActiveRecord: 0.4ms | Allocations: 2612)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:32:27 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>1, "who is this?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.3ms | Allocations: 217)
+  Rendered layout layouts/application.html.erb (Duration: 63.2ms | Allocations: 2301)
+Completed 200 OK in 96ms (Views: 80.1ms | ActiveRecord: 0.5ms | Allocations: 3917)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:32:31 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"why?"}
+  [1m[36mSearch Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "why?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+Search successful for IP: ::1, Query: why?
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 896)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:32:39 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"where?"}
+  [1m[36mSearch Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "where?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:35:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mSearch Create (1.7ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "where?"], ["ip", "::1"], ["created_at", "2024-01-13 04:32:39.653427"], ["updated_at", "2024-01-13 04:32:39.653427"]]
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+  [1m[36mTRANSACTION (130.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:30:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"::1", :query=>"where?"}}
+Search successful for IP: ::1, Query: where?
+Completed 200 OK in 163ms (Views: 1.3ms | ActiveRecord: 132.8ms | Allocations: 2776)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:32:43 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>2, "who is this?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 1544)
+Completed 200 OK in 25ms (Views: 12.7ms | ActiveRecord: 0.4ms | Allocations: 2621)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:32:47 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:21:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>2, "who is this?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 1536)
+Completed 200 OK in 22ms (Views: 12.7ms | ActiveRecord: 0.4ms | Allocations: 2610)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:38:30 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>2, "who is this?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.6ms | Allocations: 222)
+  Rendered layout layouts/application.html.erb (Duration: 111.8ms | Allocations: 15668)
+Completed 200 OK in 142ms (Views: 123.4ms | ActiveRecord: 0.8ms | Allocations: 18224)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:38:35 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/user_logs"):
+  
+Started GET "/" for ::1 at 2024-01-13 06:38:42 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>2, "who is this?"=>1, "who?"=>2, "why?"=>2}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 1556)
+Completed 200 OK in 19ms (Views: 8.7ms | ActiveRecord: 0.7ms | Allocations: 2631)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:38:43 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/user_logs"):
+  
+Started POST "/search" for ::1 at 2024-01-13 06:38:50 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"why?"}
+  [1m[36mSearch Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "why?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:43:in `duplicate_entry?'
+Search successful for IP: ::1, Query: why?
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 995)
+
+
+Started POST "/search" for ::1 at 2024-01-13 06:39:05 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"wo was it ?"}
+  [1m[36mSearch Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "wo was it ?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:43:in `duplicate_entry?'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+  [1m[36mSearch Create (1.5ms)[0m  [1m[32mINSERT INTO "searches" ("query", "ip", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["query", "wo was it ?"], ["ip", "::1"], ["created_at", "2024-01-13 04:39:06.001099"], ["updated_at", "2024-01-13 04:39:06.001099"]]
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+  [1m[36mTRANSACTION (104.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/search_controller.rb:38:in `log_search'
+[ActionCable] Broadcasting to search_channel: {:search_result=>{:ip=>"::1", :query=>"wo was it ?"}}
+Search successful for IP: ::1, Query: wo was it ?
+Completed 200 OK in 129ms (Views: 0.2ms | ActiveRecord: 106.7ms | Allocations: 4016)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:39:08 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>2, "who is this?"=>1, "who?"=>2, "why?"=>2, "wo was it ?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 1575)
+Completed 200 OK in 22ms (Views: 14.3ms | ActiveRecord: 0.4ms | Allocations: 2666)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:39:09 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/user_logs"):
+  
+Started GET "/" for ::1 at 2024-01-13 06:39:21 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>2, "who is this?"=>1, "who?"=>2, "why?"=>2, "wo was it ?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 1562)
+Completed 200 OK in 25ms (Views: 12.4ms | ActiveRecord: 0.5ms | Allocations: 2653)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:39:22 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/user_logs"):
+  
+Started POST "/search" for ::1 at 2024-01-13 06:39:38 +0200
+Processing by SearchController#search as */*
+  Parameters: {"query"=>"where?"}
+  [1m[36mSearch Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "searches" WHERE "searches"."query" = ? AND "searches"."ip" = ? LIMIT ?[0m  [["query", "where?"], ["ip", "::1"], ["LIMIT", 1]]
+  ↳ app/controllers/search_controller.rb:43:in `duplicate_entry?'
+Search successful for IP: ::1, Query: where?
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 902)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:39:48 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>2, "who is this?"=>1, "who?"=>2, "why?"=>2, "wo was it ?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 1556)
+Completed 200 OK in 19ms (Views: 10.7ms | ActiveRecord: 0.4ms | Allocations: 2647)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:39:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/user_logs"):
+  
+Started GET "/" for ::1 at 2024-01-13 06:40:23 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>2, "who is this?"=>1, "who?"=>2, "why?"=>2, "wo was it ?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | Allocations: 14933)
+Completed 200 OK in 70ms (Views: 53.9ms | ActiveRecord: 1.3ms | Allocations: 17314)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:40:29 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 51ms (Views: 42.1ms | ActiveRecord: 1.7ms | Allocations: 4732)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:40:49 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>2, "who is this?"=>1, "who?"=>2, "why?"=>2, "wo was it ?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 1556)
+Completed 200 OK in 25ms (Views: 14.5ms | ActiveRecord: 0.4ms | Allocations: 2646)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:40:50 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.0ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 27ms (Views: 18.4ms | ActiveRecord: 1.0ms | Allocations: 3296)
+
+
+Started GET "/" for 102.215.236.24 at 2024-01-13 06:42:08 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>2, "who is this?"=>1, "who?"=>2, "why?"=>2, "wo was it ?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 6.7ms | Allocations: 465)
+  Rendered layout layouts/application.html.erb (Duration: 216.5ms | Allocations: 33819)
+Completed 200 OK in 328ms (Views: 244.6ms | ActiveRecord: 1.6ms | Allocations: 40298)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 06:42:10 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 58ms (Views: 48.5ms | ActiveRecord: 3.6ms | Allocations: 7430)
+
+
+Started GET "/" for ::1 at 2024-01-13 06:44:38 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"can i help you?"=>1, "wh?"=>1, "what can we do for?"=>1, "what is your name?"=>1, "what?"=>2, "whe?"=>1, "wher was he?"=>1, "wher?"=>1, "where are you from?"=>1, "where you from?"=>1, "where?"=>2, "who is this?"=>1, "who?"=>2, "why?"=>2, "wo was it ?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 77.0ms | Allocations: 14926)
+Completed 200 OK in 96ms (Views: 79.7ms | ActiveRecord: 3.6ms | Allocations: 17341)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 06:44:43 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.8ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 264ms (Views: 251.4ms | ActiveRecord: 2.6ms | Allocations: 4634)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (135.9ms)[0m  [1m[31mDELETE FROM "searches"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
