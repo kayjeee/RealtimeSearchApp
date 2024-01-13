@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Trends</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body {
+      text-align: center;
+    }
+
+    #trendsTable {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Search Trends</h1>
+  <!-- Render your trends data here -->
+  <table id="trendsTable">
+    <thead>
+      <tr>
+        <th>Query</th>
+        <th>Search Count</th>
+      </tr>
+    </thead>
+    <tbody id="trendsTableBody">
+      <!-- Table content will be dynamically added here -->
+    </tbody>
+  </table>
+
+  <script>
+    // Function to fetch and display search trends
+    function fetchSearchTrends() {
+      $.ajax({
+        url: '/trends',
+        type: 'GET',
+        success: function (data) {
+          // Render search trends on the page
+          renderSearchTrendsTable(data);
+        },
+        error: function (error) {
+          console.error(`Error fetching search trends: ${error.statusText}`);
+        }
+      });
+    }
+
+    // Function to render search trends table
+    function renderSearchTrendsTable(searchTrendsData) {
+      const trendsTableBody = $('#trendsTableBody');
+      trendsTableBody.empty(); // Clear the table body
+      // Populate the table with search trends data
+      searchTrendsData.forEach(entry => {
+        trendsTableBody.append(`<tr><td>${entry.query}</td><td>${entry.count}</td></tr>`);
+      });
+    }
+
+    // Call fetchSearchTrends on page load
+    $(document).ready(function () {
+      fetchSearchTrends();
+    });
+  </script>
+</body>
+</html>
