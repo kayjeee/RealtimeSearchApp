@@ -10641,3 +10641,1347 @@ SyntaxError (C:/Users/kagis/RealtimeSearchApp/config/routes.rb:9: syntax error, 
   
 config/routes.rb:9: syntax error, unexpected end-of-input, expecting `end' or dummy end
 config/routes.rb:9: syntax error, unexpected end-of-input, expecting `end' or dummy end
+Started GET "/" for ::1 at 2024-01-13 10:02:59 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 77.3ms | Allocations: 435)
+  Rendered layout layouts/application.html.erb (Duration: 1761.8ms | Allocations: 42406)
+Completed 200 OK in 2654ms (Views: 1919.8ms | ActiveRecord: 1.0ms | Allocations: 49907)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 10:03:04 +0200
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for ::1 at 2024-01-13 10:03:06 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 362ms (Views: 353.3ms | ActiveRecord: 2.9ms | Allocations: 5089)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:03:18 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.3ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 2135)
+Completed 200 OK in 34ms (Views: 20.2ms | ActiveRecord: 0.4ms | Allocations: 3091)
+
+
+Started GET "/app.js" for ::1 at 2024-01-13 10:03:18 +0200
+  
+AbstractController::ActionNotFound (The action 'javascript' could not be found for ApplicationController):
+  
+actionpack (7.0.8) lib/abstract_controller/base.rb:146:in `process'
+actionview (7.0.8) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.8) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.8) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.8) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.8) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.8) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.8) lib/rack/etag.rb:27:in `call'
+rack (2.2.8) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.8) lib/rack/head.rb:12:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.8) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.8) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.8) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.8) lib/active_record/migration.rb:638:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.8) lib/rack/method_override.rb:24:in `call'
+rack (2.2.8) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.8) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/user_logs" for ::1 at 2024-01-13 10:03:19 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 20ms (Views: 12.1ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:09:15 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.7ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 76.3ms | Allocations: 2643)
+Completed 200 OK in 113ms (Views: 95.8ms | ActiveRecord: 2.3ms | Allocations: 4260)
+
+
+Started GET "/javascript/app.js" for ::1 at 2024-01-13 10:09:15 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/javascript/app.js"):
+  
+Started GET "/user_logs" for ::1 at 2024-01-13 10:09:16 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 1418)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:09:21 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 2141)
+Completed 200 OK in 29ms (Views: 18.9ms | ActiveRecord: 0.4ms | Allocations: 3096)
+
+
+Started GET "/javascript/app.js" for ::1 at 2024-01-13 10:09:22 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/javascript/app.js"):
+  
+Started GET "/user_logs" for ::1 at 2024-01-13 10:09:22 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 22ms (Views: 14.1ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:09:45 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 65.7ms | Allocations: 2631)
+Completed 200 OK in 128ms (Views: 116.3ms | ActiveRecord: 0.4ms | Allocations: 4115)
+
+
+Started GET "/javascripts/app.js" for ::1 at 2024-01-13 10:09:46 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/javascripts/app.js"):
+  
+Started GET "/user_logs" for ::1 at 2024-01-13 10:09:47 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 24ms (Views: 13.7ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:12:06 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.7ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 2616)
+Completed 200 OK in 96ms (Views: 81.7ms | ActiveRecord: 0.5ms | Allocations: 4101)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:12:07 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 6.3ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:13:14 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.7ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 2611)
+Completed 200 OK in 53ms (Views: 38.3ms | ActiveRecord: 0.3ms | Allocations: 4094)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:13:14 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 23ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:13:19 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 2108)
+Completed 200 OK in 26ms (Views: 17.1ms | ActiveRecord: 0.3ms | Allocations: 3048)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:13:20 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 14ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:16:50 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 5.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 109.6ms | Allocations: 2615)
+Completed 200 OK in 156ms (Views: 135.1ms | ActiveRecord: 1.2ms | Allocations: 4098)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:16:51 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 20ms (Views: 12.2ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:16:51 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 19ms (Views: 9.3ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:16:57 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 2130)
+Completed 200 OK in 27ms (Views: 16.6ms | ActiveRecord: 0.6ms | Allocations: 3083)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:16:58 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 25ms (Views: 18.6ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:16:58 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:17:19 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.7ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 2108)
+Completed 200 OK in 61ms (Views: 40.8ms | ActiveRecord: 0.9ms | Allocations: 3047)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:17:20 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 44ms (Views: 34.2ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:17:21 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 20ms (Views: 8.9ms | ActiveRecord: 0.6ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:18:44 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 2135)
+Completed 200 OK in 36ms (Views: 21.8ms | ActiveRecord: 0.4ms | Allocations: 3076)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:18:45 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.7ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 19ms (Views: 10.1ms | ActiveRecord: 0.7ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:18:45 +0200
+Started GET "/" for ::1 at 2024-01-13 10:18:46 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 24ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 1400)
+
+
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 36.1ms | Allocations: 2290)
+Completed 200 OK in 112ms (Views: 45.2ms | ActiveRecord: 0.6ms | Allocations: 3306)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:18:47 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (2.0ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 32.0ms | Allocations: 2108)
+Completed 200 OK in 65ms (Views: 34.7ms | ActiveRecord: 2.0ms | Allocations: 3047)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:18:47 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+Started GET "/user_logs" for ::1 at 2024-01-13 10:18:47 +0200
+  Rendered layout layouts/application.html.erb (Duration: 54.1ms | Allocations: 2471)
+Completed 200 OK in 89ms (Views: 73.3ms | ActiveRecord: 0.6ms | Allocations: 3455)
+
+
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.7ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 24ms (Views: 9.0ms | ActiveRecord: 0.7ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:18:48 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 111ms (Views: 45.9ms | ActiveRecord: 0.6ms | Allocations: 1503)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:18:49 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 8.4ms | ActiveRecord: 0.6ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:18:49 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 24ms (Views: 14.3ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:19:45 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 2117)
+Completed 200 OK in 45ms (Views: 33.5ms | ActiveRecord: 0.4ms | Allocations: 3056)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:19:46 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 61ms (Views: 13.9ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:19:46 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 131ms (Views: 26.4ms | ActiveRecord: 1.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:20:02 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 2102)
+Completed 200 OK in 30ms (Views: 18.2ms | ActiveRecord: 0.6ms | Allocations: 3041)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:20:02 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 19ms (Views: 13.5ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:20:03 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:21:36 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.8ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 2142)
+Completed 200 OK in 46ms (Views: 30.1ms | ActiveRecord: 0.7ms | Allocations: 3083)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:21:37 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 17ms (Views: 9.4ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:21:37 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 19ms (Views: 10.8ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:21:44 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 2129)
+Completed 200 OK in 58ms (Views: 46.1ms | ActiveRecord: 0.4ms | Allocations: 3070)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:21:45 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 18ms (Views: 10.4ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:21:45 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 14ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:22:42 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 3.3ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 104.4ms | Allocations: 2621)
+Completed 200 OK in 153ms (Views: 130.3ms | ActiveRecord: 0.7ms | Allocations: 4106)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:22:43 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 20ms (Views: 14.3ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:22:44 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:23:11 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 2124)
+Completed 200 OK in 60ms (Views: 38.0ms | ActiveRecord: 1.1ms | Allocations: 3065)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:23:13 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 19ms (Views: 10.7ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:23:13 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 8.5ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:23:45 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 60.7ms | Allocations: 2601)
+Completed 200 OK in 99ms (Views: 83.5ms | ActiveRecord: 0.4ms | Allocations: 4083)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:23:46 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.7ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 0.7ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:23:46 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 23ms (Views: 13.6ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:23:56 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 2123)
+Completed 200 OK in 34ms (Views: 23.7ms | ActiveRecord: 0.4ms | Allocations: 3063)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:23:57 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 28ms (Views: 19.4ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:23:57 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 20ms (Views: 11.6ms | ActiveRecord: 0.5ms | Allocations: 1394)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:25:35 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.7ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 118.1ms | Allocations: 2647)
+Completed 200 OK in 147ms (Views: 132.5ms | ActiveRecord: 0.5ms | Allocations: 4134)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:25:35 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 15ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:25:36 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 22ms (Views: 11.4ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:25:36 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 23ms (Views: 14.9ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:28:04 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.2ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 72.3ms | Allocations: 2658)
+Completed 200 OK in 106ms (Views: 90.1ms | ActiveRecord: 0.7ms | Allocations: 4143)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:28:05 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 182ms (Views: 146.3ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:28:06 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 17ms (Views: 9.3ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:28:06 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 31ms (Views: 11.4ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:28:12 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 2120)
+Completed 200 OK in 29ms (Views: 19.0ms | ActiveRecord: 0.3ms | Allocations: 3060)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:28:12 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 18ms (Views: 7.8ms | ActiveRecord: 0.5ms | Allocations: 1396)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:28:13 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.8ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 135ms (Views: 124.7ms | ActiveRecord: 0.8ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:28:13 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 19ms (Views: 9.3ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:28:58 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.0ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 149.8ms | Allocations: 2648)
+Completed 200 OK in 181ms (Views: 166.7ms | ActiveRecord: 0.6ms | Allocations: 4131)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:28:59 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 26ms (Views: 15.7ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:29:53 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 2111)
+Completed 200 OK in 43ms (Views: 29.7ms | ActiveRecord: 0.5ms | Allocations: 3051)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:29:54 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 7.8ms | ActiveRecord: 0.6ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:29:56 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 2108)
+Completed 200 OK in 59ms (Views: 37.1ms | ActiveRecord: 0.5ms | Allocations: 3047)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:29:56 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 30ms (Views: 18.9ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:30:35 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 5.2ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 115.3ms | Allocations: 2682)
+Completed 200 OK in 172ms (Views: 137.6ms | ActiveRecord: 0.7ms | Allocations: 4169)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:30:36 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 25ms (Views: 15.1ms | ActiveRecord: 0.6ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:30:36 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.8ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 21ms (Views: 11.1ms | ActiveRecord: 1.8ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:30:37 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.7ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 21ms (Views: 10.7ms | ActiveRecord: 0.7ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:31:19 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 2.2ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 89.3ms | Allocations: 2665)
+Completed 200 OK in 140ms (Views: 118.9ms | ActiveRecord: 0.6ms | Allocations: 4150)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:31:20 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 2103)
+Completed 200 OK in 35ms (Views: 20.8ms | ActiveRecord: 0.4ms | Allocations: 3044)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:31:21 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 2108)
+Completed 200 OK in 38ms (Views: 25.6ms | ActiveRecord: 0.9ms | Allocations: 3047)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:31:26 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 2123)
+Completed 200 OK in 32ms (Views: 19.9ms | ActiveRecord: 0.8ms | Allocations: 3062)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:31:26 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.8ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 22ms (Views: 12.9ms | ActiveRecord: 0.8ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:31:27 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (1.0ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 211ms (Views: 194.2ms | ActiveRecord: 1.0ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:33:44 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.5ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 92.3ms | Allocations: 2641)
+Completed 200 OK in 141ms (Views: 120.6ms | ActiveRecord: 0.8ms | Allocations: 4127)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:33:45 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:33:48 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.3ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 2129)
+Completed 200 OK in 35ms (Views: 24.8ms | ActiveRecord: 0.5ms | Allocations: 3069)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:33:49 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 29ms (Views: 20.4ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:34:56 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (2.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 2130)
+Completed 200 OK in 66ms (Views: 40.1ms | ActiveRecord: 2.4ms | Allocations: 3071)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:34:57 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 22ms (Views: 11.8ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:35:07 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 2137)
+Completed 200 OK in 44ms (Views: 30.7ms | ActiveRecord: 0.6ms | Allocations: 3078)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:35:08 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 17ms (Views: 9.8ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:37:06 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (1.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.7ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 78.8ms | Allocations: 2655)
+Completed 200 OK in 115ms (Views: 98.6ms | ActiveRecord: 1.6ms | Allocations: 4140)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:37:07 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 28ms (Views: 19.8ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:37:53 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.3ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 73.9ms | Allocations: 2648)
+Completed 200 OK in 116ms (Views: 95.9ms | ActiveRecord: 0.7ms | Allocations: 4132)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:37:54 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.8ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 18ms (Views: 8.2ms | ActiveRecord: 0.8ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:38:02 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 39.7ms | Allocations: 2126)
+Completed 200 OK in 61ms (Views: 43.4ms | ActiveRecord: 0.7ms | Allocations: 3066)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:38:02 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 23ms (Views: 17.0ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:38:11 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 2123)
+Completed 200 OK in 40ms (Views: 26.0ms | ActiveRecord: 0.4ms | Allocations: 3062)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:38:12 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:39:47 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 134.4ms | Allocations: 2108)
+Completed 200 OK in 304ms (Views: 188.6ms | ActiveRecord: 0.7ms | Allocations: 3048)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:39:48 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 20ms (Views: 13.1ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:39:55 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 2108)
+Completed 200 OK in 35ms (Views: 24.6ms | ActiveRecord: 0.4ms | Allocations: 3047)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:39:56 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 20ms (Views: 11.4ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:42:43 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 2147)
+Completed 200 OK in 49ms (Views: 28.4ms | ActiveRecord: 0.7ms | Allocations: 3088)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:42:45 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 151ms (Views: 73.7ms | ActiveRecord: 0.6ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:42:47 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 2140)
+Completed 200 OK in 35ms (Views: 23.5ms | ActiveRecord: 0.9ms | Allocations: 3080)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:42:48 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 14ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:43:00 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 2124)
+Completed 200 OK in 40ms (Views: 27.8ms | ActiveRecord: 0.4ms | Allocations: 3063)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:43:00 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:43:55 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 3.1ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 269.8ms | Allocations: 2644)
+Completed 200 OK in 358ms (Views: 333.6ms | ActiveRecord: 0.7ms | Allocations: 4133)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:43:56 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 8.9ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:44:00 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.7ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 2126)
+Completed 200 OK in 40ms (Views: 25.7ms | ActiveRecord: 0.7ms | Allocations: 3066)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:44:00 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:45:44 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.8ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 87.7ms | Allocations: 2647)
+Completed 200 OK in 132ms (Views: 113.2ms | ActiveRecord: 0.5ms | Allocations: 4129)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:45:45 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 48ms (Views: 36.0ms | ActiveRecord: 0.6ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:45:51 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 2120)
+Completed 200 OK in 45ms (Views: 28.6ms | ActiveRecord: 0.6ms | Allocations: 3061)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:45:52 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.5ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 24ms (Views: 15.6ms | ActiveRecord: 0.5ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:46:13 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 1.8ms | Allocations: 193)
+  Rendered layout layouts/application.html.erb (Duration: 79.7ms | Allocations: 3009)
+Completed 200 OK in 115ms (Views: 98.4ms | ActiveRecord: 0.4ms | Allocations: 4496)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:46:14 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 18ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:46:14 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 40ms (Views: 31.2ms | ActiveRecord: 0.4ms | Allocations: 1393)
+
+
+Started GET "/" for ::1 at 2024-01-13 10:46:17 +0200
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 0.2ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 2117)
+Completed 200 OK in 37ms (Views: 27.1ms | ActiveRecord: 0.4ms | Allocations: 3058)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:46:17 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 13ms (Views: 7.3ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 10:46:17 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 16ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 1393)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (33.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddUserIdToSearches (20240113091002)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "searches" ADD "user_id" integer[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE INDEX "index_searches_on_user_id" ON "searches" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asearches" ("id" integer NOT NULL PRIMARY KEY, "query" varchar DEFAULT NULL, "ip" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "tindex_asearches_on_user_id" ON "asearches" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "asearches" ("id","query","ip","created_at","updated_at","user_id")
+                     SELECT "id","query","ip","created_at","updated_at","user_id" FROM "searches"[0m
+  [1m[35m (28.9ms)[0m  [1m[35mDROP TABLE "searches"[0m
+  [1m[35m (24.5ms)[0m  [1m[35mCREATE TABLE "searches" ("id" integer NOT NULL PRIMARY KEY, "query" varchar DEFAULT NULL, "ip" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer DEFAULT NULL, CONSTRAINT "fk_rails_e192b86393"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_searches_on_user_id" ON "searches" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "searches" ("id","query","ip","created_at","updated_at","user_id")
+                     SELECT "id","query","ip","created_at","updated_at","user_id" FROM "asearches"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "asearches"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20240113091002"]]
+  [1m[36mTRANSACTION (163.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (18.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2024-01-13 11:14:28 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (10.8ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 8.5ms | Allocations: 435)
+  Rendered layout layouts/application.html.erb (Duration: 272.8ms | Allocations: 35058)
+Completed 200 OK in 436ms (Views: 304.3ms | ActiveRecord: 11.4ms | Allocations: 42554)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 11:14:30 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 83ms (Views: 60.0ms | ActiveRecord: 12.2ms | Allocations: 5570)
+
+
+Started GET "/user_logs" for ::1 at 2024-01-13 11:14:30 +0200
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.6ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 199ms (Views: 188.9ms | ActiveRecord: 0.6ms | Allocations: 1419)
+
+

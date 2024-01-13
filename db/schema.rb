@@ -10,12 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_01_13_054455) do
+ActiveRecord::Schema[7.0].define(version: 2024_01_13_091002) do
   create_table "searches", force: :cascade do |t|
     t.string "query"
     t.string "ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["query"], name: "index_searches_on_query"
+    t.index ["user_id"], name: "index_searches_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -24,4 +27,5 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_13_054455) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "searches", "users"
 end
