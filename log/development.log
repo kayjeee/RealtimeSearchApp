@@ -11985,3 +11985,75 @@ Processing by SearchController#user_logs as */*
 Completed 200 OK in 199ms (Views: 188.9ms | ActiveRecord: 0.6ms | Allocations: 1419)
 
 
+Started GET "/" for 102.215.236.24 at 2024-01-13 11:46:02 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SearchController#analytics as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:23:in `analytics'
+Search analytics: {"wher ca  go?"=>1, "who shot the guy?"=>1, "who was it last night?"=>1, "who was it last?"=>1, "who?"=>1}
+  Rendering layout layouts/application.html.erb
+  Rendering search/analytics.html.erb within layouts/application
+  Rendered search/analytics.html.erb within layouts/application (Duration: 5.4ms | Allocations: 435)
+  Rendered layout layouts/application.html.erb (Duration: 1349.2ms | Allocations: 43379)
+Completed 200 OK in 1546ms (Views: 1378.5ms | ActiveRecord: 1.0ms | Allocations: 50921)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 11:46:05 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.7ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 463ms (Views: 453.8ms | ActiveRecord: 2.1ms | Allocations: 12237)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 11:46:06 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 13ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 1428)
+
+
+Started GET "/trends" for 102.215.236.24 at 2024-01-13 11:46:09 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1810)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 3286)
+Completed 200 OK in 36ms (Views: 23.2ms | ActiveRecord: 0.4ms | Allocations: 4278)
+
+
+Started GET "/trends" for 102.215.236.24 at 2024-01-13 11:46:10 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#trends as HTML
+  [1m[36mSearch Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) AS "count_all", "searches"."query" AS "searches_query" FROM "searches" GROUP BY "searches"."query"[0m
+  ↳ app/controllers/search_controller.rb:47:in `retrieve_trends'
+Trends: {}
+  Rendering layout layouts/application.html.erb
+  Rendering search/trends.html.erb within layouts/application
+  Rendered search/trends.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1539)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 3016)
+Completed 200 OK in 26ms (Views: 16.5ms | ActiveRecord: 0.4ms | Allocations: 3959)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 11:46:11 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.4ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 14ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 1428)
+
+
+Started GET "/user_logs" for 102.215.236.24 at 2024-01-13 11:46:12 +0200
+Cannot render console from 102.215.236.24! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by SearchController#user_logs as */*
+  [1m[36mSearch Load (0.3ms)[0m  [1m[34mSELECT "searches".* FROM "searches"[0m
+  ↳ app/controllers/search_controller.rb:31:in `user_logs'
+Completed 200 OK in 13ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 1418)
+
+
