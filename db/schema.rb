@@ -17,7 +17,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_13_091002) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.index ["query"], name: "index_searches_on_query"
     t.index ["user_id"], name: "index_searches_on_user_id"
   end
 
