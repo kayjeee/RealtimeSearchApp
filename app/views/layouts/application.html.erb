@@ -144,8 +144,29 @@
 
     // Function to add data to the user log table if the question is valid
     function addToUserLogTable(ip, query) {
-      userLogTableBody.append(`<tr><td>${ip}</td><td>${query}</td></tr>`);
+      // Retrieve existing user log data from sessionStorage
+      const existingUserLogData = JSON.parse(sessionStorage.getItem('userLogData')) || [];
+      // Add the new entry to the user log data
+      existingUserLogData.push({ ip, query });
+      // Save the updated user log data to sessionStorage
+      sessionStorage.setItem('userLogData', JSON.stringify(existingUserLogData));
+
+      // Update the table with the new data
+      renderUserLogTable(existingUserLogData);
     }
+
+    // Function to render user log table
+    function renderUserLogTable(userLogData) {
+      userLogTableBody.empty(); // Clear the table body
+      // Populate the table with the user log data
+      userLogData.forEach(entry => {
+        userLogTableBody.append(`<tr><td>${entry.ip}</td><td>${entry.query}</td></tr>`);
+      });
+    }
+
+    // Check if there is user log data in sessionStorage and render the table
+    const existingUserLogData = JSON.parse(sessionStorage.getItem('userLogData')) || [];
+    renderUserLogTable(existingUserLogData);
 
     // Function to analyze search queries
     function analyzeSearchQuery(searchQuery) {
