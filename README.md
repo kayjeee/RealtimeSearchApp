@@ -27,7 +27,7 @@
 # 📖 RealtimeSearchApp<a name="about-project"></a>
 
 
-**RealtimeSearchApp** a realtime search box, where users search articles, and then to have analytics that display what users were searching fo
+**RealtimeSearchApp**a realtime search box, where users search articles, and then to have analytics that display what users were searching for
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -47,27 +47,23 @@
   </ul>
 </details>
 
-<details>
-
-
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-
-- **record user input in realtime .**
-- **Iultimately display analytics.**
+ **Record user input in realtime .**
+- ** displayed analytics.**
 - **& trends on what people are searching for the most**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[Live Demo]n/a
+n/a
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Project Presentation <a name="Presentation"></a>
-[Presentation]n/a
+n/a
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,14 +129,16 @@ To run tests, run the following command:
 - Twitter: [@twitterhandle](https://twitter.com/schoolspun)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kagiso/)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>i my gro
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **proper scaling**
+- [ ] **Profile Section**
+- [ ] **News Section**
+- [ ] **Community Forum**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,7 +148,7 @@ To run tests, run the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [https://github.com/RealtimeSearchApp/issues/](../../issues/).
+Feel free to check the [https://github.com/kayjeee/RealtimeSearchApp/issues/3](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -167,7 +165,7 @@ If you like this project give me a follow and/or a star
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank helpjuice for giving me this opportunity to build this amazing project. 
+I would like to thank HelpJuice for giving me this opportunity to build this amazing project. 
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
