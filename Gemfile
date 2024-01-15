@@ -5,6 +5,8 @@ ruby '3.2.2'
 
 gem 'redis'
 
+# Use hiredis to get better performance than the "redis" gem
+gem 'hiredis'
 # Rails and Web Server
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.7', '>= 7.0.7.2'

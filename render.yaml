@@ -17,4 +17,13 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
-  
+      - key: redis://red-cmih0121hbls738et8r0:6379 # this must match the name of the environment variable used in production.rb
+        fromService:
+          type: redis
+          name: cache
+          property: connectionString
+  - type: redis
+    name: redis
+    ipAllowList: []
+    plan: free
+    maxmemoryPolicy: noeviction
