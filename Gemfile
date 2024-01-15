@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.2.2'
 
+gem 'redis'
+
 # Rails and Web Server
 gem 'puma', '~> 5.0'
 gem 'rails', '~> 7.0.7', '>= 7.0.7.2'
@@ -49,3 +51,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Caching for Boot Time
 gem 'bootsnap', require: false
+
+group :production, :test do
+  gem 'redis'
+end
